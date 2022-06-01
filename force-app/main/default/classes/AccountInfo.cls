@@ -3,7 +3,7 @@ public class AccountInfo {
     public static void showAccounts() {
         List<Account> myList = [SELECT name, Id, (SELECT name FROM Opportunities WHERE closeDate > Today) FROM Account];
         system.debug('Account names with opportnities where close date is in the future' + myList);
-        
+        //For loop is good
         for (Account eachmyList: myList) {
             system.debug('List of Accounts with Opps future close date ' + eachmyList.name);
                 for (Opportunity eachOpp : eachmyList.Opportunities) {
