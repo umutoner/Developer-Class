@@ -1,0 +1,14 @@
+//AccConAndOppOperation.deleteOppsLessThan20k();
+//AccConAndOppOperation.updateContactFromAcc();
+//AccConAndOppOperation.createNnumberOpps(0);
+//AccConAndOppOperation.updateOppDesc();
+//AccConAndOppOperation.fetchAllAccounts();
+//AccConAndOppOperation.fetchOpportunity('Web', 'Closed Lost');
+//AccConAndOppOperation.printAll();
+// AccConAndOppOperation.createAccount('Test Account', 900000, 'Prospect');
+// AccConAndOppOperation.createAccount('', 900000, 'Prospect');
+// AccConAndOppOperation.sumAllClosedWonOpps();
+// AccConAndOppOperation.aggOppSumAll();
+//AccConAndOppOperation.accsWithClosedWonOpps('Prospecting');
+//AccConAndOppOperation.AllAccountsWithContacts();
+//AccConAndOppOperation.AddContactFromAccId('0018b00001xNLalAAG');
