@@ -1,0 +1,42 @@
+[
+    {
+        "attributes": {
+            "type": "Account",
+            "url": "/services/data/v54.0/sobjects/Account/0018c00002J3WcgAAF"
+        },
+        "Id": "0018c00002J3WcgAAF",
+        "Name": "before after trigger testVBVB--SI"
+    },
+    {
+        "attributes": {
+            "type": "Account",
+            "url": "/services/data/v54.0/sobjects/Account/0018c00002KSKwnAAH"
+        },
+        "Id": "0018c00002KSKwnAAH",
+        "Name": "check opp creation--SI"
+    },
+    {
+        "attributes": {
+            "type": "Account",
+            "url": "/services/data/v54.0/sobjects/Account/0018c00002KSFxOAAX"
+        },
+        "Id": "0018c00002KSFxOAAX",
+        "Name": "test trigger--SI"
+    },
+    {
+        "attributes": {
+            "type": "Account",
+            "url": "/services/data/v54.0/sobjects/Account/0018c00002J34BeAAJ"
+        },
+        "Id": "0018c00002J34BeAAJ",
+        "Name": "DragonVBVBVB--SI"
+    },
+    {
+        "attributes": {
+            "type": "Account",
+            "url": "/services/data/v54.0/sobjects/Account/0018c00002J2kuOAAR"
+        },
+        "Id": "0018c00002J2kuOAAR",
+        "Name": "ABC ComputingVBVBVB--SI"
+    }
+]

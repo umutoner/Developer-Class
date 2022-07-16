@@ -27,6 +27,7 @@ trigger accountTrigger2 on Account (before insert, before update, after insert, 
             }
         }
     }
+    
 }
     
     /*if(trigger.isAfter && trigger.isUpdate){

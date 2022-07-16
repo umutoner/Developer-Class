@@ -1,37 +1,75 @@
 public class AccountTriggerHandler {
 
-    public static void createOppWithNewAcc(List<account> accTriggerNew, List<account> accTriggerOld,Map<id, account> accTriggerNewMap, Map<id, account> accTriggerOldMap){
-// Get all the triggered account into the list...
-        List<Account> tacc = new List<Account>();
-        for (Account acc : accTriggerNew) {
-            tacc.add(acc);
-        }
-// Create new opportunity(ies) and insert them...
-// Don't forget to assign the required fields on opportunity object.
-// Same with related contact creation...        
-        List<Opportunity> newOpp = New List<Opportunity>();
-        List<Contact> newC = new List<Contact>();
-        for (Account eaId: tacc) {
-            Opportunity opp = new Opportunity();
-            opp.AccountId = eaId.Id;
-            opp.CloseDate = date.today()+90;
-            opp.Name = eaId.Name;
-            opp.StageName = 'Prospecting';
-            newOpp.add(opp);
+//     public static void createOppWithNewAcc(List<account> accTriggerNew, List<account> accTriggerOld,Map<id, account> accTriggerNewMap, Map<id, account> accTriggerOldMap){
+// // Get all the triggered account into the list...
+//         List<Account> tacc = new List<Account>();
+//         for (Account acc : accTriggerNew) {
+//             tacc.add(acc);
+//         }
+// // Create new opportunity(ies) and insert them...
+// // Don't forget to assign the required fields on opportunity object.
+// // Same with related contact creation...        
+//         List<Opportunity> newOpp = New List<Opportunity>();
+//         List<Contact> newC = new List<Contact>();
+//         for (Account eaId: tacc) {
+//             Opportunity opp = new Opportunity();
+//             opp.AccountId = eaId.Id;
+//             opp.CloseDate = date.today()+90;
+//             opp.Name = eaId.Name;
+//             opp.StageName = 'Prospecting';
+//             newOpp.add(opp);
 
-            Contact nc = new Contact();
-            nc.AccountId = eaId.id;
-            nc.LastName = eaId.name;
-            newC.add(nc);
+//             Contact nc = new Contact();
+//             nc.AccountId = eaId.id;
+//             nc.LastName = eaId.name;
+//             newC.add(nc);
+//         }
+//         if (!newOpp.isEmpty()) {
+//             insert newOpp;
+//         }
+//         if (!newC.isEmpty()) {
+//             insert newC;
+//         }
+//     }
+public static void getKanyeQuote(List<Account> newList, Map<Id,Account> oldMap){
+    //In this method we will identify all the account Ids 
+    //for which quote needs to be updated
+    Set<Id> accIdsSet = new Set<Id>();
+    if(oldMap != null){
+        //This will run when the record is updated
+        for(Account acc : newList){
+            Account oldRec = oldMap.get(acc.Id);
+            if(oldRec.GetKanyeQuote_c__c != acc.GetKanyeQuote_c__c && acc.GetKanyeQuote_c__c){
+                accIdsSet.add(acc.Id);
+            }
         }
-        if (!newOpp.isEmpty()) {
-            insert newOpp;
+    } else {
+        //This will run when new record is created
+        for(Account acc : newList){
+            if(acc.GetKanyeQuote_c__c){
+                accIdsSet.add(acc.Id);
+            }
         }
-        if (!newC.isEmpty()) {
-            insert newC;
-        }
-
-        
+    }
+    if(!accIdsSet.isEmpty()){
+        updateKanyeQuote(accIdsSet);
+    }
+}
+@future(callout=true)
+public static void updateKanyeQuote(Set<Id> accIdsSet){
+    String quote = QuoteCalloutClass.fetchQuote();
+    List<Account> accList = new List<Account>();
+    for(Id accId : accIdsSet){
+        Account acc = new Account();
+        acc.Id = accId;
+        acc.Kanye_Quote__c = quote;
+        acc.GetKanyeQuote_c__c = false;
+        accList.add(acc);
+    }
+    if(!accList.isEmpty()){
+        Update accList;
+    }
+}
 
     }
     
@@ -50,7 +88,7 @@ public class AccountTriggerHandler {
     //         eacc.name.addError('This name has taken please try other name');
     //    }
     // }
-}
+//}
 
     // public static void addRelatedContact(List<account> accTriggerNew, List<account> accTriggerOld,Map<id, account> accTriggerNewMap, Map<id, account> accTriggerOldMap){
     //     List<Contact> ListCnt = New List<Contact>();

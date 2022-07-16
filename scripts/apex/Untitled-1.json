@@ -1,0 +1,118 @@
+[
+    {
+        "attributes": {
+            "type": "Account",
+            "url": "/services/data/v55.0/sobjects/Account/0018b00001xNLaqAAG"
+        },
+        "Id": "0018b00001xNLaqAAG",
+        "Name": "United Oil & Gas Corp.",
+        "AnnualRevenue": 5600000000,
+        "Type": "Customer - Direct",
+        "Opportunities": {
+            "totalSize": 10,
+            "done": true,
+            "records": [
+                {
+                    "attributes": {
+                        "type": "Opportunity",
+                        "url": "/services/data/v55.0/sobjects/Opportunity/0068b00001JONrHAAX"
+                    },
+                    "AccountId": "0018b00001xNLaqAAG",
+                    "Id": "0068b00001JONrHAAX",
+                    "StageName": "Negotiation/Review",
+                    "Amount": 125000.00
+                },
+                {
+                    "attributes": {
+                        "type": "Opportunity",
+                        "url": "/services/data/v55.0/sobjects/Opportunity/0068b00001JONrLAAX"
+                    },
+                    "AccountId": "0018b00001xNLaqAAG",
+                    "Id": "0068b00001JONrLAAX",
+                    "StageName": "Proposal/Price Quote",
+                    "Amount": 270000.00
+                },
+                {
+                    "attributes": {
+                        "type": "Opportunity",
+                        "url": "/services/data/v55.0/sobjects/Opportunity/0068b00001JONrMAAX"
+                    },
+                    "AccountId": "0018b00001xNLaqAAG",
+                    "Id": "0068b00001JONrMAAX",
+                    "StageName": "Closed Won",
+                    "Amount": 120000.00
+                },
+                {
+                    "attributes": {
+                        "type": "Opportunity",
+                        "url": "/services/data/v55.0/sobjects/Opportunity/0068b00001JONrUAAX"
+                    },
+                    "AccountId": "0018b00001xNLaqAAG",
+                    "Id": "0068b00001JONrUAAX",
+                    "StageName": "Negotiation/Review",
+                    "Amount": 270000.00
+                },
+                {
+                    "attributes": {
+                        "type": "Opportunity",
+                        "url": "/services/data/v55.0/sobjects/Opportunity/0068b00001JONrXAAX"
+                    },
+                    "AccountId": "0018b00001xNLaqAAG",
+                    "Id": "0068b00001JONrXAAX",
+                    "StageName": "Closed Won",
+                    "Amount": 270000.00
+                },
+                {
+                    "attributes": {
+                        "type": "Opportunity",
+                        "url": "/services/data/v55.0/sobjects/Opportunity/0068b00001JONrZAAX"
+                    },
+                    "AccountId": "0018b00001xNLaqAAG",
+                    "Id": "0068b00001JONrZAAX",
+                    "StageName": "Closed Won",
+                    "Amount": 915000.00
+                },
+                {
+                    "attributes": {
+                        "type": "Opportunity",
+                        "url": "/services/data/v55.0/sobjects/Opportunity/0068b00001JONreAAH"
+                    },
+                    "AccountId": "0018b00001xNLaqAAG",
+                    "Id": "0068b00001JONreAAH",
+                    "StageName": "Closed Won",
+                    "Amount": 235000.00
+                },
+                {
+                    "attributes": {
+                        "type": "Opportunity",
+                        "url": "/services/data/v55.0/sobjects/Opportunity/0068b00001JONrfAAH"
+                    },
+                    "AccountId": "0018b00001xNLaqAAG",
+                    "Id": "0068b00001JONrfAAH",
+                    "StageName": "Closed Won",
+                    "Amount": 440000.00
+                },
+                {
+                    "attributes": {
+                        "type": "Opportunity",
+                        "url": "/services/data/v55.0/sobjects/Opportunity/0068b00001JONrhAAH"
+                    },
+                    "AccountId": "0018b00001xNLaqAAG",
+                    "Id": "0068b00001JONrhAAH",
+                    "StageName": "Closed Won",
+                    "Amount": 120000.00
+                },
+                {
+                    "attributes": {
+                        "type": "Opportunity",
+                        "url": "/services/data/v55.0/sobjects/Opportunity/0068b00001JONrjAAH"
+                    },
+                    "AccountId": "0018b00001xNLaqAAG",
+                    "Id": "0068b00001JONrjAAH",
+                    "StageName": "Needs Analysis",
+                    "Amount": 675000.00
+                }
+            ]
+        }
+    }
+]

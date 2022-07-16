@@ -1,24 +1,22 @@
 @isTest
-public with sharing class AccountBatchTest {
+public with sharing class PurgeMyEventsTest {
     @isTest
-    private static void testMethod1() {
+    private static void testMethod() {
         //START STEP 1: PREPARE DATA 
-        list<account> listAcc = new list<account>();
-        account acc = new account();
-        acc.Name = 'TEST ACC 0';
-        acc.AccountNumber = 'asci-1';
-        acc.Active__c = 'Yes';
-        listAcc.add(acc);
+        list<MyEvent__C> listMyEvents = new list<MyEvent__C>();
+        Event_Organizer__c evo = new Event_Organizer__c();
+        
+        MyE.Name = 'TEST MyEvent 0';
+        MyE. = 'asci-1';
+        listMyEvents.add(MyE);
 
-        for (Integer i = 1; i < 500; i++){
-            account acc2 = new account();
-            acc2.Name = 'TEST ACC'+i;
-            acc2.AccountNumber = 'asci-1'+i;
-            acc2.Active__c = 'Yes';
-            listAcc.add(acc2);
+        for (Integer i = 1; i < 300; i++){
+            MyEvent__C me = new MyEvent__C();
+            me.Name = 'TEST ACC'+i;
+            
+            listMyEvents.add(me);
         }
-        system.debug('size of list ' + listAcc.size());
-
+        
         if(!listAcc.isEmpty()){
             insert listAcc;
         }
