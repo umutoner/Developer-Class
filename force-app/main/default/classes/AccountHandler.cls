@@ -1,4 +1,5 @@
 public with sharing class AccountHandler {
+
     public static List<Account> insertNewAccount(List<string> accNames) {
         List<Account> newAcc = new List<Account>();      
         if(!accNames.isEmpty()){
@@ -13,8 +14,8 @@ public with sharing class AccountHandler {
         }else{
             System.debug('Please enter a full string list');             
             return null; 
-            }
-            }    
+        }
+    }    
 }
 
 
